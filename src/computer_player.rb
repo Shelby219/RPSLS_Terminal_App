@@ -1,17 +1,21 @@
-require_relative 'weapons'
+
+require_relative 'weapons.rb'
+require_relative 'rules_engine.rb'
 
 
+class ComputerPlayer 
+    include Weapons
+    include RulesEngine
 
-class ComputerPlayer < Weapons
-    
-    
     def initialize
-
+        @computer_name
     end
 
     def move_shuffle
-
+        computer = Weapons::COMPUTER_CHOICES.sample#.to_s.downcase
+        
     end
 
-
 end
+
+ComputerPlayer.new
