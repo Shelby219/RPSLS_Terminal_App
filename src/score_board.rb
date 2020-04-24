@@ -18,15 +18,26 @@ class ScoreBoard
         @computer_score += points
     end
     
-    # def self.show_score(pl, co)
-    # pl = @player_score 
-    # co = @computer_score  
-    # end
+    def show_score_player
+        @player_score
+    end
+
+    def show_score_computer
+        @computer_score
+    end
 
 end
 
-#tests
-p ScoreBoard.new.add_score_player(1) #1
-p ScoreBoard.new.add_score_computer(1) #2
-#p Scoreboard.show_score #2
 
+
+
+
+
+# #tests
+# scoreboard1 = ScoreBoard.new
+# scoreboard1.add_score_player(1) #1
+# p scoreboard1.add_score_player(1) #2
+# p scoreboard1.add_score_computer(1) #1
+# #p Scoreboard.show_score #2
+
+# p scoreboard1.show_score_player
