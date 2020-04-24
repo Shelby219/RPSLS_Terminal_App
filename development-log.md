@@ -63,3 +63,8 @@ The score_board.rb was changed from a class to a module. Having it as a class di
 Score_board.rb is possibly not needed as an MVP, it is a bit complicated at the moment. The KISS method is important!
 
 Got extremely stuck on checking if a variable was in an array (In Weapons.rb file), I was stuck on the fact it is an array of arrays. Parentheses was the issue..... :/. Solved!
+
+Decided to scrap the score_board.rb for the moment, it was complicating things quite a bit. Significant progress on game_round.rb, stuck on a few errors, no method error etc. Rework file requiring, and the control flow I think.
+
+## Status Update #4
+Saturday 25th of April

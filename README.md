@@ -79,7 +79,7 @@ ERRORS: The clear potential errors for this feature are if a user input a value 
 A key feature of this game is the fact the user is playing against the computer. This feature operates in the background of the game, in the sense that each round the user plays against the computer, rather than the computers weapon choice being a requested input like the user, it is an automatically generated random weapon choice. This ensures the 'chance' style of this game is true in nature and not a "fixed" format. The interaction the user has with the computer is at the round result of each round in the game, it shows who won that round and the score tally.
 Error handling: 
 
-## Score Board - Module
+## Score Board - Module (DELETED)
 This feature is holding the methods for keeping a running score tally of the player and the computers score. This feature will be displayed at the end of each round to show a running total of the score. If at any point the user would like to view their score at any point during the rounds they will be able to using a key command.
 Error handling: 
 
