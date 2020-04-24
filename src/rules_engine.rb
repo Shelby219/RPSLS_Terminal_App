@@ -1,105 +1,67 @@
+# frozen_string_literal: true
+
 require_relative 'weapons.rb'
 
-
 module RulesEngine
-	module_function
-	include Weapons
-	# def who_won(move1, move2)
-	# 	# Returns either :first, :second or :draw
-	# 	if move1 == move2 
-	# 		:draw
-	# 	elsif  move1 == :scissors and move2 == :paper 
-	# 		:first
-	# 	end
-	# end
+  module_function
+  include Weapons
 
-	def round_draw(player_move, computer_move)
-		if player_move == computer_move
-			:draw
-		end
-	end
+  def round_outcome(plays)
+   # plays = [computer_choice, player_choice]
+    return :PLAYERWIN if Weapons::PLAYER_WIN.include?(plays)
+    return :COMPUTERWIN if Weapons::COMPUTER_WIN.include?(plays)
+    return :DRAW if player == computer
+  end
 
-	def player_win(player_move, computer_move)
-		if player_move == :scissors and computer_move == :paper 
-			:first 
-		#puts "#{player_move} cuts #{computer_move}"
-		elsif player_move == :paper and computer_move == :rock 
-			:first	
-		# 	puts "#{player_move} covers #{computer_move}"
-		elsif player_move == :rock and computer_move == :lizard 
-			:first	
-		# 	puts "#{player_move} crushes #{computer_move}"
-		elsif player_move == :lizard and computer_move == :spock 
-			:first	
-			# 	puts "#{player_move} poisons #{computer_move}"
-		elsif player_move == :spock and computer_move == :scissors 
-			:first	
-		# 	puts "#{player_move} smashes #{computer_move}"
-		elsif player_move == :scissors and computer_move == :lizard 
-			:first	
-		# 	puts "#{player_move} decapitate #{computer_move}"
-		elsif player_move == :lizard and computer_move == :paper 
-			:first	
-		# 	puts "#{player_move} eats #{computer_move}"
-		elsif player_move == :paper and computer_move == :spock 
-			:first	
-		# 	puts "#{player_move} disproves #{computer_move}"
-		elsif player_move == :spock and computer_move == :rock 
-			:first	
-		# 	puts "#{player_move} vaporizes #{computer_move}"
-		elsif player_move == :rock and computer_move == :scissors 
-			:first	
-		# 	puts "#{player_move} crushes #{computer_move}"
-		end
-	end
+  def player_win(player_m, computer_m)
+     if player_m == :scissors && computer_m == :paper
+       puts "#{player_m} cuts #{computer_m}"
+     elsif player_m == :paper && computer_m == :rock
+      	puts "#{player_m} covers #{computer_m}"
+     elsif player_m == :rock && computer_m == :lizard
+      	puts "#{player_m} crushes #{computer_m}"
+     elsif player_m == :lizard && computer_m == :spock
+       	puts "#{player_m} poisons #{computer_m}"
+     elsif player_m == :spock && computer_m == :scissors
+      	puts "#{player_m} smashes #{computer_m}"
+     elsif player_m == :scissors && computer_m == :lizard
+      	puts "#{player_m} decapitate #{computer_m}"
+     elsif player_m == :lizard && computer_m == :paper
+      	puts "#{player_m} eats #{computer_m}"
+     elsif player_m == :paper && computer_m == :spock
+      	puts "#{player_m} disproves #{computer_m}"
+     elsif player_m == :spock && computer_m == :rock
+      	puts "#{player_m} vaporizes #{computer_m}"
+     elsif player_m == :rockc && computer_m == :scissors
+       	puts "#{player_m} crushes #{computer_m}"
+     end
+   end
 
-	def computer_win(computer_move, player_move)
-		if computer_move == :scissors and player_move == :paper 
-			:first	
-		#   puts "#{computer_move} cuts #{player_move}"
-		elsif computer_move == :paper and player_move == :rock 
-			:first	
-	# 		puts "#{computer_move} covers #{player_move}"
-		elsif computer_move == :rock and player_move == :lizard  
-			:first	
-	# 		puts "#{computer_move} crushes #{player_move}"
-		elsif computer_move == :lizard and player_move == :spock 
-			:first	
-	# 		puts "#{computer_move} poisons #{player_move}"
-		elsif computer_move == :spock and computer_move == :scissors 
-			:first	
-	# 		puts "#{computer_move} smashes #{player_move}"
-		elsif computer_move == :scissors and player_move == :lizard 
-			:first	
-	# 		puts "#{computer_move} decapitate #{player_move}"
-		elsif computer_move == :lizard and player_move == :paper 
-			:first	
-	# 		puts "#{computer_move} eats #{player_move}"
-		elsif computer_move == :paper and player_move == :spock 
-			:first	
-	# 		puts "#{computer_move} disproves #{player_move}"
-		elsif computer_move== :spock and player_move == :rock 
-			:first	
-	# 		puts "#{computer_move} vaporizes #{player_move}"
-		elsif computer_move == :rock and player_move == :scissors 
-			:first	
-	# 		puts "#{computer_move} crushes #{player_move}"
-		end	
-	end
-
-
-	def round_draw1(player_move, computer_move)
-		if Weapons::COMPUTER_CHOICES[5]  ==  Weapons::COMPUTER_CHOICES[5] 
-			:draw
-		end
-	end
-
+   def computer_win(computer_m, player_m)
+     if computer_m == :scissors && player_m == :paper
+        puts "#{computer_m} cuts #{player_m}"
+     elsif computer_m == :paper && player_m == :rock
+      	puts "#{computer_m} covers #{player_m}"
+     elsif computer_m == :rock && player_m == :lizard
+     		puts "#{computer_m} crushes #{player_m}"
+     elsif computer_m == :lizard && player_m == :spock
+      	puts "#{computer_m} poisons #{player_m}"
+     elsif computer_m == :spock && player_m == :scissors
+     		puts "#{computer_m} smashes #{player_m}"
+     elsif computer_m == :scissors && player_m == :lizard
+     		puts "#{computer_m} decapitate #{player_m}"
+     elsif computer_m == :lizard && player_m == :paper
+     		puts "#{computer_m} eats #{player_m}"
+     elsif computer_m == :paper && player_m == :spock
+     		puts "#{computer_m} disproves #{player_m}"
+     elsif computer_m == :spock && player_m == :rock
+     		puts "#{computer_m} vaporizes #{player_m}"
+     elsif computer_m == :rock && player_m == :scissors
+      	puts "#{computer_m} crushes #{player}"
+     end
+   end
 end
-	 
 
-
+p RulesEngine.round_outcome(:scissors, :paper)
 RulesEngine.player_win(:scissors, :paper)
-
-
-
-
+RulesEngine.computer_win(:scissors, :paper)

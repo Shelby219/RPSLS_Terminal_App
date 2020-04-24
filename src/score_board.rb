@@ -1,9 +1,5 @@
-require_relative 'weapons.rb'
-
-
-
 module ScoreBoard
-    
+
     def add_score_player(points)
         @player_score += points 
     end

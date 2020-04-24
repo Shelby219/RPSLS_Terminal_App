@@ -53,4 +53,9 @@ MainGame.rb
 ## Status Update #3
 Thursday the 23rd of April
 
-An intro.rb file was created to house the introduction methods and content, to keep it seperate from the main.rb file. Starting testing for the score board test file, created a test that would check if the add_score method would add a point to the player_score instance variable. The test did not pass, came back nil. Need to refactor
+An intro.rb file was created to house the introduction methods and content, to keep it seperate from the main.rb file. Starting testing for the score board test file, created a test that would check if the add_score method would add a point to the player_score instance variable. The test did not pass, came back nil. Need to refactor. Score_board.rb was started on.
+
+## Status Update #4
+Friday the 24th of April
+
+The score_board.rb was changed from a class to a module. Having it as a class did not seem to fit the needs. A module holding the methods for adding scores was better suited.
