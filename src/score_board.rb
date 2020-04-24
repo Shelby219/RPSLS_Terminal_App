@@ -1,15 +1,9 @@
 require_relative 'weapons.rb'
 
 
-class ScoreBoard
-    attr_accessor :player_score, :computer_score
-	
-	def initialize (player_score = 0, computer_score = 0)
-        @player_score = player_score
-        @computer_score = computer_score
-	end
 
-
+module ScoreBoard
+    
     def add_score_player(points)
         @player_score += points 
     end
@@ -27,9 +21,6 @@ class ScoreBoard
     end
 
 end
-
-
-
 
 
 
