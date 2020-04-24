@@ -6,11 +6,11 @@ module RulesEngine
   module_function
   include Weapons
 
-  def round_outcome(plays)
+  def round_outcome(player_c, computer_c) #This is argument Error ????
    # plays = [computer_choice, player_choice]
-    return :PLAYERWIN if Weapons::PLAYER_WIN.include?(plays)
-    return :COMPUTERWIN if Weapons::COMPUTER_WIN.include?(plays)
-    return :DRAW if player == computer
+    return :PLAYERWIN if Weapons::PLAYER_WIN.include?([player_c, computer_c])
+    return :COMPUTERWIN if Weapons::COMPUTER_WIN.include?([player_c, computer_c])
+    return :DRAW if player_c == computer_c
   end
 
   def player_win(player_m, computer_m)
@@ -37,7 +37,7 @@ module RulesEngine
      end
    end
 
-   def computer_win(computer_m, player_m)
+   def computer_win(player_m, computer_m)
      if computer_m == :scissors && player_m == :paper
         puts "#{computer_m} cuts #{player_m}"
      elsif computer_m == :paper && player_m == :rock
@@ -62,6 +62,6 @@ module RulesEngine
    end
 end
 
-p RulesEngine.round_outcome(:scissors, :paper)
-RulesEngine.player_win(:scissors, :paper)
-RulesEngine.computer_win(:scissors, :paper)
+#RulesEngine.round_outcome(:paper, :scissors)
+#RulesEngine.player_win(:scissors, :paper)
+#RulesEngine.computer_win(:paper, :scissors)

@@ -59,3 +59,7 @@ An intro.rb file was created to house the introduction methods and content, to k
 Friday the 24th of April
 
 The score_board.rb was changed from a class to a module. Having it as a class did not seem to fit the needs. A module holding the methods for adding scores was better suited.
+
+Score_board.rb is possibly not needed as an MVP, it is a bit complicated at the moment. The KISS method is important!
+
+Got extremely stuck on checking if a variable was in an array (In Weapons.rb file), I was stuck on the fact it is an array of arrays. Parentheses was the issue..... :/. Solved!

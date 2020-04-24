@@ -16,9 +16,10 @@ module Player
        else
          nil
         end
-     end
+      end
     end
 
+    
 end
 
 class GameRound
@@ -44,18 +45,27 @@ class GameRound
         puts "Tie, play again!"
         play
       when :PLAYERWIN
-        RulesEngine.player_win(player, computer)
+        puts "PLAYER WINNER"
+        #return RulesEngine.player_win(player, computer) #This is not passing this method at the moment
         @player_score += 1
       when :COMPUTERWIN
-        RulesEngine.computer_win(computer, player)
+        puts "COMPUTER WINNER"
+        #return RulesEngine.computer_win(computer, player)
         @computer_score += 1
       end
       #end
     end
 
+    def get_score #This is not working at the moment as well
+        puts "Your score is #{@player_score} and the computer's score is #{@computer_score}!"
+    end
+  
+
 end
 
 newgame = GameRound.new.play
+
+newgame.get_score
 
 
 

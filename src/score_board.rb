@@ -1,22 +1,22 @@
-module ScoreBoard
+# module ScoreBoard
 
-    def add_score_player(points)
-        @player_score += points 
-    end
+#     def add_score_player(points)
+#         @player_score += points 
+#     end
 
-    def add_score_computer(points)
-        @computer_score += points
-    end
+#     def add_score_computer(points)
+#         @computer_score += points
+#     end
     
-    def show_score_player
-        @player_score
-    end
+#     def show_score_player
+#         @player_score
+#     end
 
-    def show_score_computer
-        @computer_score
-    end
+#     def show_score_computer
+#         @computer_score
+#     end
 
-end
+# end
 
 
 

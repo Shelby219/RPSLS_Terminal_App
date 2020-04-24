@@ -24,7 +24,7 @@ ENTRY = {'r' => :ROCK,'p' => :PAPER,'s' => :SCISSORS,'sp' => :SPOCK,'l' => :LIZA
 ]
 # COMPUTER_WIN ARRAY this will take the original PLAYER_WIN  array and flip the symbols, thus returning a loss for the user/player and creating new array
 
-  # COMPUTER_WIN ARRAY this will take the original PLAYER_WIN  array and flip the symbols, thus returning a loss for the user/player and creating new array
+# COMPUTER_WIN ARRAY this will take the original PLAYER_WIN  array and flip the symbols, thus returning a loss for the user/player and creating new array
 COMPUTER_WIN = PLAYER_WIN.map { |player_choice, computer_choice| [computer_choice, player_choice] }
 
 end
