@@ -68,3 +68,29 @@ Decided to scrap the score_board.rb for the moment, it was complicating things q
 
 ## Status Update #4
 Saturday 25th of April
+
+The methods I created to be able to use the actual terms for each round, eg "paper covers rock", is not working at the moment. That has been moved to a nice to have purely due to time. So it has been changed to beats for the winning rounds. I will try to implement that in future.
+
+A raise and recue method input for the players choice in the game_round.rb.
+
+Have trouble creating a show_score method for the player being able to view there score.
+
+Modules are definately my friend and I am getting used to using them, but missing module_function is killing me! :/
+
+Have trouble with the player_score and computer_score instance variable updating...
+FIXED! 
+
+Had some issues with the variable for the player name, changed to a class variable and it runs!.
+
+intro.rb file edited with rules and welcome message.
+
+Added a if else to declare a winner one the score of 5 is reached for either player or computer!
+### Current features my code contains:
+Weapons Module
+Rules Engine Module
+Computer Player Class
+Game Round Class with a player module
+MainGame.rb
+-Username input
+-Play Again Method
+intro.rb file which houses the introduction code

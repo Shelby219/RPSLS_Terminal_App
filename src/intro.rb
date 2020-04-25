@@ -38,7 +38,8 @@ spinner.stop('Done!') # Stop animation
 
 spinner = TTY::Spinner.new
 
-puts "Press any any key to continue!"
+puts "Press any any key to continue!".colorize(:magenta)
+
 STDIN.getch  #Waits for user input (Any Key)
 puts `clear` # Clears screen after
 
@@ -48,9 +49,9 @@ puts `clear` # Clears screen after
 
 def instructions
 
-  puts "Made famous by the made famous by the Big Bang Theory, this is ROCK PAPER SCISSORS SPOCK LIZARD!\n\n"
-  puts "It is you against the computer. Try to beat the computers reign as the ultimate RPSSL CHAMPION!\n\n"
-  puts "The rules are simple:\n\n"
+  puts "Made famous by the made famous by the Big Bang Theory, this is ROCK PAPER SCISSORS SPOCK LIZARD!\n\n".colorize(:green)
+  puts "It is you against the computer. Try to beat the computers reign as the ultimate RPSSL CHAMPION!\n\n".colorize(:yellow)
+  puts "The rules are simple:\n\n".colorize(:yellow)
   puts "Scissors cuts Paper"
   puts "Paper covers Rock"
   puts "Rock crushes Lizard"
@@ -62,8 +63,10 @@ def instructions
   puts "Spock vaporizes Rock"
   puts "Rock crushes Scissors\n\n"
 
-  puts "The first to win five rounds... is the ULTIMATE RPSSL CHAMPION!\n\n"
+  puts "The first to win five rounds... is the ULTIMATE RPSSL CHAMPION!\n\n".colorize(:green)
 
+  puts "Press any any key to continue!".colorize(:magenta)
+  STDIN.getch  #Waits for user input (Any Key)
+  puts `clear` # Clears screen after
 end
 
-instructions

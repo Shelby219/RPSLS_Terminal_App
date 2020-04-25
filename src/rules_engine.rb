@@ -17,8 +17,13 @@ module RulesEngine
    end
   end
 
+
+
+
+
+  
   #NICE TO HAVE FEATURE IS THE ACTUAL NAMES FOR THE WINNING ROUND
-  # def player_win(player_m, computer_m)
+  # def self.player_win(player_m, computer_m)
   #    if player_m == :scissors && computer_m == :paper
   #      puts "#{player_m.to_s.downcase} cuts #{computer_m.to_s.downcase}"
   #    elsif player_m == :paper && computer_m == :rock
@@ -42,7 +47,7 @@ module RulesEngine
   #    end
   #  end
 
-  #  def computer_win(player_m, computer_m)
+  #  def self.computer_win(player_m, computer_m)
   #    if computer_m == :scissors && player_m == :paper
   #       puts "#{computer_m} cuts #{player_m}"
   #    elsif computer_m == :paper && player_m == :rock

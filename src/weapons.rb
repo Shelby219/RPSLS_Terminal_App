@@ -1,6 +1,7 @@
 # Weapons
 
 module Weapons
+  module_function
 # This is a constant variable which is holding the key which is the type command for the moves, and the value as the moves as symbols
 ENTRY = {'r' => :ROCK,'p' => :PAPER,'s' => :SCISSORS,'sp' => :SPOCK,'l' => :LIZARD }.freeze
 

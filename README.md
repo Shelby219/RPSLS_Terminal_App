@@ -29,11 +29,11 @@ Once the game is installed per the '[Help](#help) information section, the game 
 
 To begin a welcome message will print then an overview of the simple game rules are then printed for a reminder to the player. The listed weapons are also shown and the key commands for each weapon. 
 
-````Rock: 1````
-````Paper: 2````
-````Scissors: 3````
-````Spock: 4````
-````Lizard: 5````
+````Rock: r````
+````Paper: p````
+````Scissors: s````
+````Spock: sp````
+````Lizard: l````
 
 The user will be prompted to press any key to continue.
 
