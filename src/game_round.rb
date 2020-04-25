@@ -5,20 +5,21 @@ require_relative 'computer_player.rb'
 
 #this module is a section for the player methods to be held
 module Player 
+    include RulesEngine
     def player_choice
      loop do
        puts "Choose your weapon: Rock (r), Paper (p), Scissors (s), Spock (sp), Lizard (l)"
        answer = gets.chomp.downcase
+       #checking for valid answer
        if Weapons::ENTRY.key?(answer)
          return Weapons::ENTRY[answer]
-       elsif answer != Weapons::PLAYER_ENTRIES
-         puts "That entry is invalid. Please re-nter!"
-       else
-         nil
-        end
+       end
+       #exception handling for invalid entry
+    raise if answer != Weapons::PLAYER_ENTRIES
+    rescue  StandardError => e
+        puts "That entry is invalid. Please re-nter!"
       end
-    end
-
+    end  
     
 end
 
@@ -33,33 +34,49 @@ class GameRound
         @computer_score = computer_score
         @winning_score = 5
     end
-    
+      
     def play
       #while @player_score <  @winning_score && @computer_score <  @winning_score
         player = player_choice
         computer = ComputerPlayer.new.move_shuffle #choose a random option for computer
          puts "Player chooses #{player.to_s.downcase}."
          puts "Computer chooses #{computer.to_s.downcase}."
+        # RulesEngine.round_outcome(player, computer)
+        # if :DRAW
+        #     puts "Tie, play again!"
+        #    # play
+        # elsif :PLAYERWIN
+        #     RulesEngine.player_win(player, computer) 
+        #     @player_score += 1
+        # elsif :COMPUTERWIN
+        #     return RulesEngine.computer_win(computer, player)
+        #     @computer_score += 1
+        # else
+        #     puts "METHOD ERROR"
+        # end
       case RulesEngine.round_outcome(player, computer)
-      when :DRAW
+      when :DRAW 
         puts "Tie, play again!"
         play
-      when :PLAYERWIN
-        puts "PLAYER WINNER"
+      when :PLAYERWIN 
+        puts "#{player.to_s.capitalize} beats #{computer.to_s.downcase}, player wins the round." 
         #return RulesEngine.player_win(player, computer) #This is not passing this method at the moment
         @player_score += 1
-      when :COMPUTERWIN
-        puts "COMPUTER WINNER"
+      when :COMPUTERWIN 
+        puts "#{computer.to_s.capitalize} beats #{player.to_s.downcase}, computer wins the round." 
         #return RulesEngine.computer_win(computer, player)
         @computer_score += 1
       end
-      #end
+     #end
     end
 
-    def get_score #This is not working at the moment as well
-        puts "Your score is #{@player_score} and the computer's score is #{@computer_score}!"
-    end
-  
+     def self.get_score #This is not working at the moment as well
+        player_show = @player_score.to_s
+        computer_show = @computer_score.to_s
+        puts "SCORE: Player - #{player_show} Computer - #{computer_show}"
+        self
+     end
+    
 
 end
 
