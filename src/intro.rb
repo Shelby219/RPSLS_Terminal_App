@@ -1,8 +1,9 @@
-require 'tty-cursor'
+require 'tty-cursor' #used for welcome banner
 require 'tty-screen'
 require 'tty-spinner'
 require 'io/console'
-require 'tty-prompt'
+require 'tty-prompt' #used for 
+require 'colorize'
 
 
 
@@ -23,7 +24,7 @@ def centered_text(text)
   puts text
 end
 
-centered_text("WELCOME TO ULTIMATE SCISSORS PAPER ROCK THE TERIMAL GAME")
+centered_text("WELCOME TO ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME")
 
 
 #Spinning loading bar
@@ -41,5 +42,28 @@ puts "Press any any key to continue!"
 STDIN.getch  #Waits for user input (Any Key)
 puts `clear` # Clears screen after
 
+#..........................................................................................
 
+#INSTRUCTIONS
 
+def instructions
+
+  puts "Made famous by the made famous by the Big Bang Theory, this is ROCK PAPER SCISSORS SPOCK LIZARD!\n\n"
+  puts "It is you against the computer. Try to beat the computers reign as the ultimate RPSSL CHAMPION!\n\n"
+  puts "The rules are simple:\n\n"
+  puts "Scissors cuts Paper"
+  puts "Paper covers Rock"
+  puts "Rock crushes Lizard"
+  puts "Lizard poisons Spock"
+  puts "Spock smashes Scissors"
+  puts "Scissors decapitate Lizard"
+  puts "Lizard Eats Paper"
+  puts "Paper disproves Spock"
+  puts "Spock vaporizes Rock"
+  puts "Rock crushes Scissors\n\n"
+
+  puts "The first to win five rounds... is the ULTIMATE RPSSL CHAMPION!\n\n"
+
+end
+
+instructions
