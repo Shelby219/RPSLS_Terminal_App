@@ -8,53 +8,47 @@ require_relative 'intro.rb'
 require_relative 'game_round.rb'
 
 
-#INTRO
 
-def rpssl_main
 
-  play_again = true
-
-  while play_again 
-#method from intro.rb
-    instructions
-
-#calling main method and new game from game_round.rb
-    Player.main_player
-    newgame = GameRound.new.play
-
-  puts "Would you like to play again? (yes) or (no)?"
-  again = gets.chomp
-
-  if again == "no" 
-   break play_again == !true
-  else again == "yes" 
+def ask_again
+  begin
+    puts "Would you like to play again? (yes) or (no)?"
+    again = gets.strip.to_s
+   raise if again == yes.to_s or no.to_s #/working???
+   rescue StandardError => e
+     puts "Invalid entry, please type (yes) or (no)".colorize(:yellow)
+    ask_again
   end
- end
-
 end
 
 def end_game
-puts "Thank you for playing ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME"
+  puts "Thank you for playing ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME"
+end
+  
+
+def rpssl_main
+  play_again = true
+  while play_again 
+    #method from intro.rb #INTRO
+    instructions
+
+    #calling main method and new game from game_round.rb
+    Player.main_player
+    newgame = GameRound.new.play.winner_declare
+
+    ask_again
+    if again == "no" 
+      end_game
+      break play_again == !true
+    else again == "yes" 
+   end
+ end
 end
 
-rpssl_main
-
-end_game
+#rpssl_main
 
 
+#test
+ask_again
 
 
-
-
-# @prompt = TTY:Prompt.new
-
-# main_menu
-# menu_choice = @prompt.select("Main Menu") do |menu_choice|
-#   menu.enum "."
-#   menu.choice "View Rules", 1
-#   menu.choice "View High Scores", 2
-#   menu.choice "Start New Game", 3
-#   menu.choice "Exit", 4
-# end
-# return menu_choice
-# end
