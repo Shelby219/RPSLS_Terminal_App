@@ -70,3 +70,5 @@ def instructions
   puts `clear` # Clears screen after
 end
 
+  
+

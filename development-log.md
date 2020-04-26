@@ -99,6 +99,19 @@ intro.rb file which houses the introduction code
 ## Status Update #5
 Sunday 26th of April
 
+Refactored tests due to code change. 3 tests for the rules_engine.rb were refactored due to code refactoring, they still test the same results and now pass again. 
+
+Checked the weapons_test.rb file and all tests still pass.
+
+Checked if the computer_player_test.rb still passes. 
+
+Winner declaration is still repeating at the moment.. Resolved by putting it as a seperate method in the class and using self to call it!
+
+Error with uninitilized class variable for name, error fixed.
+
+4 tests completed and run for the game_round.rb file.
+
+Working on final main.rb file. Implementing raise and rescue for the play again option. Refactor tomorrow as not working...
 
 
 ## Status Update #6

@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
 require 'test/unit'
-
 require_relative '../weapons.rb'
 
+#TESTS
+#2 tests for weapons.rb- both pass YAY
 class WeaponsTest < Test::Unit::TestCase
   def test_weapon_player
     assert_include(Weapons::ENTRY, 'r', message = nil)

@@ -20,7 +20,7 @@ ENTRY = {'r' => :ROCK,'p' => :PAPER,'s' => :SCISSORS,'sp' => :SPOCK,'l' => :LIZA
     [:LIZARD  , :PAPER   ],
     [:PAPER   , :SPOCK   ],
     [:SPOCK   , :ROCK    ],
-    [:ROCK    , :SCISSORS]
+    [:ROCK    , :LIZARD  ]
 ]
 
 # COMPUTER_WIN ARRAY this will take the original PLAYER_WIN  array and flip the symbols, thus returning a loss for the user/player and creating new array

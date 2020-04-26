@@ -7,9 +7,10 @@ class ComputerPlayer
   include Weapons
   include RulesEngine
 
-  def initialize
-    @computer_name
-  end
+  #NICE TO HAVE FEATURE
+  # def initialize
+  #   @computer_name
+  # end
 
   def move_shuffle
     computer = Weapons::COMPUTER_CHOICES.sample # .to_s.downcase
