@@ -84,7 +84,7 @@ Had some issues with the variable for the player name, changed to a class variab
 
 intro.rb file edited with rules and welcome message.
 
-Added a if else to declare a winner one the score of 5 is reached for either player or computer!
+Added a if else to declare a winner one the score of 5 is reached for either player or computer! It is working it just prints 2 or 3 times, it gets mixed in with the while loop. Refactor this.
 ### Current features my code contains:
 Weapons Module
 Rules Engine Module
@@ -94,3 +94,12 @@ MainGame.rb
 -Username input
 -Play Again Method
 intro.rb file which houses the introduction code
+
+
+## Status Update #5
+Sunday 26th of April
+
+
+
+## Status Update #6
+Monday 27th of April
