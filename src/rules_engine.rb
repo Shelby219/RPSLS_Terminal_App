@@ -19,53 +19,53 @@ module RulesEngine
 
 
   #NICE TO HAVE FEATURE IS THE ACTUAL NAMES FOR THE WINNING ROUND
-  def player_win(player_m, computer_m)
-     if player_m == :scissors && computer_m == :paper
-       puts "#{player_m.to_s.downcase} cuts #{computer_m.to_s.downcase}"
-     elsif player_m == :paper && computer_m == :rock
-      	puts "#{player_m} covers #{computer_m}"
-     elsif player_m == :rock && computer_m == :lizard
-      	puts "#{player_m} crushes #{computer_m}"
-     elsif player_m == :lizard && computer_m == :spock
-       	puts "#{player_m} poisons #{computer_m}"
-     elsif player_m == :spock && computer_m == :scissors
-      	puts "#{player_m} smashes #{computer_m}"
-     elsif player_m == :scissors && computer_m == :lizard
-      	puts "#{player_m} decapitate #{computer_m}"
-     elsif player_m == :lizard && computer_m == :paper
-      	puts "#{player_m} eats #{computer_m}"
-     elsif player_m == :paper && computer_m == :spock
-      	puts "#{player_m} disproves #{computer_m}"
-     elsif player_m == :spock && computer_m == :rock
-      	puts "#{player_m} vaporizes #{computer_m}"
-     elsif player_m == :rockc && computer_m == :scissors
-       	puts "#{player_m} crushes #{computer_m}"
-     end
-   end
+  # def player_win(player_m, computer_m)
+  #    if player_m == :SCISSORS && computer_m == :PAPER
+  #      puts "#{player_m.to_s} cuts #{computer_m.to_s}"
+  #    elsif player_m == :PAPER && computer_m == :ROCK
+  #     	puts "#{player_m.to_s} covers #{computer_m.to_s}"
+  #    elsif player_m == :ROCK && computer_m == :LIZARD
+  #     	puts "#{player_m.to_s} crushes #{computer_m.to_s}"
+  #    elsif player_m == :LIZARD && computer_m == :SPOCK
+  #      	puts "#{player_m.to_s} poisons #{computer_m.to_s}"
+  #    elsif player_m == :SPOCK && computer_m == :SCISSORS
+  #     	puts "#{player_m.to_s} smashes #{computer_m.to_s}"
+  #    elsif player_m == :SCISSORS && computer_m == :LIZARD
+  #     	puts "#{player_m.to_s} decapitate #{computer_m.to_s}"
+  #    elsif player_m == :LIZARD && computer_m == :PAPER
+  #     	puts "#{player_m.to_s} eats #{computer_m.to_s}"
+  #    elsif player_m == :PAPER && computer_m == :SPOCK
+  #     	puts "#{player_m.to_s} disproves #{computer_m.to_s}"
+  #    elsif player_m == :SPOCK && computer_m == :ROCK
+  #     	puts "#{player_m.to_s} vaporizes #{computer_m.to_s}"
+  #    elsif player_m == :ROCK && computer_m == :SCISSORS
+  #      	puts "#{player_m.to_s} crushes #{computer_m.to_s}"
+  #    end
+  #  end
 
-   def computer_win(player_m, computer_m)
-     if computer_m == :scissors && player_m == :paper
-        puts "#{computer_m} cuts #{player_m}"
-     elsif computer_m == :paper && player_m == :rock
-      	puts "#{computer_m} covers #{player_m}"
-     elsif computer_m == :rock && player_m == :lizard
-     		puts "#{computer_m} crushes #{player_m}"
-     elsif computer_m == :lizard && player_m == :spock
-      	puts "#{computer_m} poisons #{player_m}"
-     elsif computer_m == :spock && player_m == :scissors
-     		puts "#{computer_m} smashes #{player_m}"
-     elsif computer_m == :scissors && player_m == :lizard
-     		puts "#{computer_m} decapitate #{player_m}"
-     elsif computer_m == :lizard && player_m == :paper
-     		puts "#{computer_m} eats #{player_m}"
-     elsif computer_m == :paper && player_m == :spock
-     		puts "#{computer_m} disproves #{player_m}"
-     elsif computer_m == :spock && player_m == :rock
-     		puts "#{computer_m} vaporizes #{player_m}"
-     elsif computer_m == :rock && player_m == :scissors
-      	puts "#{computer_m} crushes #{player}"
-     end
-   end
+  #  def computer_win(player_m, computer_m)
+  #    if computer_m == :SCISSORS && player_m == :PAPER
+  #       puts "#{computer_m.to_s} cuts #{player_m.to_s}"
+  #    elsif computer_m == :PAPER && player_m == :ROCK
+  #     	puts "#{computer_m.to_s} covers #{player_m.to_s}"
+  #    elsif computer_m == :ROCK && player_m == :LIZARD
+  #    		puts "#{computer_m.to_s} crushes #{player_m.to_s}"
+  #    elsif computer_m == :LIZARD && player_m == :SPOCK
+  #     	puts "#{computer_m.to_s} poisons #{player_m.to_s}"
+  #    elsif computer_m == :SPOCK && player_m == :SCISSORS
+  #    		puts "#{computer_m.to_s} smashes #{player_m.to_s}"
+  #    elsif computer_m == :SCISSORS && player_m == :LIZARD
+  #    		puts "#{computer_m.to_s} decapitate #{player_m.to_s}"
+  #    elsif computer_m == :LIZARD && player_m == :PAPER
+  #    		puts "#{computer_m.to_s} eats #{player_m.to_s}"
+  #    elsif computer_m == :PAPER && player_m == :SPOCK
+  #    		puts "#{computer_m.to_s} disproves #{player_m.to_s}"
+  #    elsif computer_m == :SPOCK && player_m == :ROCK
+  #    		puts "#{computer_m.to_s} vaporizes #{player_m.to_s}"
+  #    elsif computer_m == :ROCK && player_m == :SCISSORS
+  #     	puts "#{computer_m.to_s} crushes #{player_m.to_s}"
+  #    end
+  #  end
 end
 
 #tests

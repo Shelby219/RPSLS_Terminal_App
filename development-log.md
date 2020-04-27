@@ -121,3 +121,5 @@ Refactored intro.rb to house the methods in module for consistancy.
 Incorporated a command line arguement for switching up the introduction heading. If an arguement is given then the welcome heading will be different.
 
 Final tests checked and passing.
+
+Outside eyes played the game (my husband), and he played the game right through with no errors!

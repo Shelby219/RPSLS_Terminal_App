@@ -90,13 +90,18 @@ Error handling: An exception is in place for if the user makes an invalid entry 
 To further increase the usability of the game, specific Ruby Gems were chosen.
 Ruby gems installed include:
 - 'tty-cursor'
+To enable the computer to easily navigate the console and delete lines.
 - 'tty-screen'
+For the welcome message.
 - 'tty-spinner'
+For the loading bar after the welcome message.
 - 'io/console'
-- 'tty-prompt'
+To allow the "press any key option".
 - 'colorize'
+To enable the text to be different colours.
+- 'artii'
+For the alternate welcome banner.
 
-Colorize is used to create a differentiate between the weapons. 
 
 # Control Flow Diagram
 
@@ -126,22 +131,16 @@ Completed
 
 ## Lists on Trello
 
-README.md
-This list had all the relevant cards associated with the requirements for my README.md file. The cards included, state of purpose and scope, features, user interaction, help file design, control flow diagram, project management, git hub repo, status updates and the main implementation plan.
+- Implementing the Application- This list housed my reminders for the essentional parts of the application implementation process. Including keeping my code DRY, ruby styling and conventions and utilising developer tools.
+-To Do
+-Currently Building
+-Completed
+-Issues
+-Nice to Have
 
-Implementing the Application
-This list housed my reminders for the essentional parts of the application implementation process. Including keeping my code DRY, ruby styling and conventions and utilising developer tools.
+Screen shots of the implemenation process throughout can be seen below.
 
-To Do
-
-Currently Building
-
-Completed
-
-Issues
-
-Nice to Have
-
+![trello_shot_1](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/Main%20flowchart.png  "trello_shot_1")
 
 # Testing
 
@@ -183,12 +182,17 @@ Then run this command line next to install ruby to your computer. This will inst
 > cd 
 ```
 
-5. Once in the src folder you need to install the gems used for this game. They are ready for you to be installed. All that is needed is the command:
+5. Now you are ready to run the Bash Script to finalise the installation components and play the game!
+In your Terminal. Type:
+```
+> ./run.sh
+```
+
+6. ALTERNATIVELY to point 5 - Once in the src folder you need to install the gems used for this game. They are ready for you to be installed. All that is needed is the command:
 ```
 > bundle install
 ```
-
-6. With the above processes down you now should be able to play the game! The game is run by typing:
+With the above processes down you now should be able to play the game! The game is run by typing:
 ```
 > ruby main.rb
 ```
@@ -196,6 +200,7 @@ NOTE!: There is an option for a command line argument, the welcome banner is dif
 ```
 > ruby main.rb "abc"
 ```
+
 
 ENJOY ROCK PAPER SCISSORS SPOCK LIZARD The Terminal Game!
 

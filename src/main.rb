@@ -2,7 +2,7 @@ require 'tty-cursor'
 require 'tty-screen'
 require 'tty-spinner'
 require 'io/console' #Allows the game to be started by pressing any key.
-require 'tty-prompt'
+#require 'tty-prompt'
 
 require_relative 'intro.rb'
 require_relative 'game_round.rb'
@@ -27,7 +27,7 @@ module FullGame
 
   #END GAME METHOD
   def end_game
-    puts "Thank you for playing ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME".colorize(:magenta)
+    puts "Thank you for playing ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME".colorize(:blue)
   end
 
   #RESTART GAME METHOD
