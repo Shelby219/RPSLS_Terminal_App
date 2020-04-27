@@ -4,6 +4,7 @@ require 'tty-spinner'
 require 'io/console'
 require 'tty-prompt' #used for 
 require 'colorize'
+require 'artii' #for the welcome banner in arty form- only if ARGV is used
 
 
 
@@ -14,6 +15,7 @@ module Welcome
   @size = TTY::Screen.size # => [height, width]
   @height = @size[0]
   @width = @size[1]
+
 
   def move_cursor_to_required_coordinates(text)
     x = (@size[1] - text.length) / 2
@@ -39,38 +41,57 @@ module Welcome
     STDIN.getch  #Waits for user input (Any Key)
     puts `clear` # Clears screen after
   end
-  
-end
-Welcome::centered_text("WELCOME TO ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME")
-Welcome::spinner
-Welcome::continue
 
+ #INSTRUCTIONS
+  def instructions
+    puts "Made famous by the made famous by the Big Bang Theory, this is ROCK PAPER SCISSORS SPOCK LIZARD!\n\n".colorize(:green)
+    puts "It is you against the computer. Try to beat the computers reign as the ultimate RPSSL CHAMPION!\n\n".colorize(:yellow)
+    puts "The rules are simple:\n\n".colorize(:yellow)
+    puts "Scissors cuts Paper"
+    puts "Paper covers Rock"
+    puts "Rock crushes Lizard"
+    puts "Lizard poisons Spock"
+    puts "Spock smashes Scissors"
+    puts "Scissors decapitate Lizard"
+    puts "Lizard Eats Paper"
+    puts "Paper disproves Spock"
+    puts "Spock vaporizes Rock"
+    puts "Rock crushes Scissors\n\n"
+  
+    puts "The first to win five rounds... is the ULTIMATE RPSSL CHAMPION!\n\n".colorize(:green)
+  
+    puts "Press any any key to continue!".colorize(:magenta)
+    STDIN.getch  #Waits for user input (Any Key)
+    puts `clear` # Clears screen after
+  end
+end
+
+
+#This is a new heading style and I incorporated a commany line arguemnt 
+ARTII = Artii::Base.new font: 'small'
+
+def art_work_diff
+  puts ARTII.asciify("ROCK PAPER SCISSORS SPOCK LIZARD")
+end
+
+def if_argv
+  if ARGV.empty?
+    Welcome::centered_text("ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME")
+  else
+    art_work_diff
+  end
+end
+
+#test
+# if_argv
+# Welcome::spinner
+# Welcome::continue
+# Welcome::instructions
 
 #..........................................................................................
 
-#INSTRUCTIONS
 
-def instructions
-  puts "Made famous by the made famous by the Big Bang Theory, this is ROCK PAPER SCISSORS SPOCK LIZARD!\n\n".colorize(:green)
-  puts "It is you against the computer. Try to beat the computers reign as the ultimate RPSSL CHAMPION!\n\n".colorize(:yellow)
-  puts "The rules are simple:\n\n".colorize(:yellow)
-  puts "Scissors cuts Paper"
-  puts "Paper covers Rock"
-  puts "Rock crushes Lizard"
-  puts "Lizard poisons Spock"
-  puts "Spock smashes Scissors"
-  puts "Scissors decapitate Lizard"
-  puts "Lizard Eats Paper"
-  puts "Paper disproves Spock"
-  puts "Spock vaporizes Rock"
-  puts "Rock crushes Scissors\n\n"
 
-  puts "The first to win five rounds... is the ULTIMATE RPSSL CHAMPION!\n\n".colorize(:green)
-
-  puts "Press any any key to continue!".colorize(:magenta)
-  STDIN.getch  #Waits for user input (Any Key)
-  puts `clear` # Clears screen after
-end
 
   
 
