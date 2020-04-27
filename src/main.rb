@@ -52,7 +52,5 @@ end
 
 
 FullGame::rpssl_main
-#test
-#ask_again
 
 

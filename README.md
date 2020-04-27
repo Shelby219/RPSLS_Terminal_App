@@ -217,10 +217,14 @@ With the above processes down you now should be able to play the game! The game 
 ```
 > ruby main.rb
 ```
-NOTE!: There is an option for a command line argument, the welcome banner is different. Do do this please type anything following the main file. Eg
+NOTE!: There is an option for a command line argument, the welcome banner is different. Do do this please type either of the below commands.
 ```
-> ruby main.rb "abc"
+> ruby main.rb w
 ```
+```
+> ruby main.rb b
+```
+
 
 
 ENJOY ROCK PAPER SCISSORS SPOCK LIZARD The Terminal Game!

@@ -75,14 +75,18 @@ end
 ARTII = Artii::Base.new font: 'mini'
 
 def art_work_diff
-  puts ARTII.asciify("ROCK PAPER SCISSORS SPOCK LIZARD")
+  puts ARTII.asciify("ROCK PAPER SCISSORS SPOCK LIZARD") #main title
 end
 
 def if_argv
-  if ARGV.empty?
-    art_work_diff
+  if ARGV[0] == "w"
+    Welcome::centered_text("ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME") #cool title
+    ARGV.clear
+  elsif ARGV[0] == "b"
+    puts "RPSSL" #boring title haha
+    ARGV.clear
   else
-    Welcome::centered_text("ROCK PAPER SCISSORS SPOCK LIZARD THE TERMINAL GAME")
+    art_work_diff
   end
 end
 

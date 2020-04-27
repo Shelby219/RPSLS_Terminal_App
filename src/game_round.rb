@@ -66,7 +66,6 @@ class GameRound
       while @player_score !=  @winning_score && @computer_score !=  @winning_score
         player = player_choice
         computer = ComputerPlayer.new.move_shuffle #choose a random option for computer
-         sleep 1
          puts "#{@@name.capitalize} chooses #{player.to_s.downcase}.\n\n".colorize(:green)
          puts "COMPUTER chooses #{computer.to_s.downcase}.\n\n".colorize(:red)
         case RulesEngine.round_outcome(player, computer)
