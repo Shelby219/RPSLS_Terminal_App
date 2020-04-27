@@ -108,7 +108,7 @@ Main Application Flow Chart
 Game Loop Flow Chart
 
 
-# Implementation Plan (Trello)
+# Implementation Plan
 
 I used Trello as my project management tool for my implementation plan. The board can be viewed here [link.](https://trello.com/b/OeYT8sVj/caterminalapp)
 
@@ -148,7 +148,7 @@ Nice to Have
 
 # Help
 
-##Installation Instructions
+## Installation Instructions
 
 Welcome to ROCK PAPER SCISSORS SPOCK LIZARD the Terminal Game.
 
