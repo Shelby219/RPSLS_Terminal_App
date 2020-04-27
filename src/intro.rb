@@ -68,7 +68,7 @@ end
 
 
 #This is a new heading style and I incorporated a commany line arguemnt 
-ARTII = Artii::Base.new font: 'small'
+ARTII = Artii::Base.new font: 'mini'
 
 def art_work_diff
   puts ARTII.asciify("ROCK PAPER SCISSORS SPOCK LIZARD")
@@ -83,10 +83,10 @@ def if_argv
 end
 
 #test
-# if_argv
-# Welcome::spinner
-# Welcome::continue
-# Welcome::instructions
+#  if_argv
+#  Welcome::spinner
+#  Welcome::continue
+#  Welcome::instructions
 
 #..........................................................................................
 

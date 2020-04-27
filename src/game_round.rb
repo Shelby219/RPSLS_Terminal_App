@@ -40,7 +40,7 @@ module Player
     raise if answer != Weapons::PLAYER_ENTRIES
     rescue  StandardError => e
         puts "That entry is invalid. Please re-nter!\n\n".colorize(:yellow)
-      end
+     end
     end  
 end
 
@@ -107,7 +107,6 @@ class GameRound
       self
     end
 
-    
 end
 
 #test

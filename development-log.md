@@ -18,9 +18,6 @@ MainGame.rb
 -Username input
 -Play Again Method
 
-### Current bugs I am fixing:
-
-
 
 
 ## Status Update #2
@@ -66,7 +63,7 @@ Got extremely stuck on checking if a variable was in an array (In Weapons.rb fil
 
 Decided to scrap the score_board.rb for the moment, it was complicating things quite a bit. Significant progress on game_round.rb, stuck on a few errors, no method error etc. Rework file requiring, and the control flow I think.
 
-## Status Update #4
+## Status Update #5
 Saturday 25th of April
 
 The methods I created to be able to use the actual terms for each round, eg "paper covers rock", is not working at the moment. That has been moved to a nice to have purely due to time. So it has been changed to beats for the winning rounds. I will try to implement that in future.
@@ -96,7 +93,7 @@ MainGame.rb
 intro.rb file which houses the introduction code
 
 
-## Status Update #5
+## Status Update #6
 Sunday 26th of April
 
 Refactored tests due to code change. 3 tests for the rules_engine.rb were refactored due to code refactoring, they still test the same results and now pass again. 
@@ -114,5 +111,13 @@ Error with uninitilized class variable for name, error fixed.
 Working on final main.rb file. Implementing raise and rescue for the play again option. Refactor tomorrow as not working...
 
 
-## Status Update #6
+## Status Update #7
 Monday 27th of April
+
+Refactoring the exception for the input for playing again. Refactored and now working. Changed to case statement as this suited the functions needed.
+
+Refactored intro.rb to house the methods in module for consistancy.
+
+Incorporated a command line arguement for switching up the introduction heading. If an arguement is given then the welcome heading will be different.
+
+Final tests checked and passing.
