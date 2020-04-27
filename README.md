@@ -62,32 +62,24 @@ There will be an option for the user to intiate another game, or they can quit t
 The idea of this Terminal App is to play until a score of 5 is reach for either the player or the computer player. In the beginning the player will need to enter a valid username for the game. This username must be 10 characters or less only. 
 Error handling: Error in the player name input, the player must only put a username of 10 characters or less. Anything else will be rescued as an error and the player will be returned to the create name.
 
-## Game Round - Class
+## Game Round 
 This is a core feature. It is a class which houses all the methods related to the game rounds and being able to loop until a the scoreboard has a winner with 5 points and also loops when a tie is reached for a round.
 I still wanted the rounds to be tieable, as in real life playing this game can lead to a tie. That is why the introduction of 2 other weapons to make it a 5 choice option was ideal. It reduce the chances of a tie significantly. However, in the event of a round tieing, that round will end, and the user will be prompted for another round. The idea is the winner is the first to 5 points (or win 5 rounds), so the rounds will just continue to loop until the there is a clear winner with 5 points. The users interaction with this feature is that they will be prompted at the beginning of each round to make a weapon selection, which they will type in. The computers choice is autogeneratored and then the round results are displayed. The user is prompted to press any key to contine onto the next round. The same for if a tie is reached, the user is prompted to press any key for the another round to start. 
 Error handling: For the weapon selection, an exception has been put in place for invalid entries, so they player will be asked to enter a weapon again if a wrong entry is made. The tie function is sort of an exception as well. If a tie is reached the user will be prompted to start another round.
 
-## Rules Engine - Module
+## Rules Engine 
 The rules engine is the module that houses all the methods pertaining to the rules of the game. It determines what equals a draw and what equals a win. The user has no interaction with this part of the code, it is in the background operating its features.
 
-## Weapons - Class
+## Weapons 
 This class is initializing the weapons and their corresponding moves to defeat the 2 other weapons it can. 
 ERRORS: The potential errors of this feature are mentioned above in the game round. A players invalid entry is picked up by the exception and they are asked to make another entry.
 
-## Computer Player - Class
+## Computer Player 
 A key feature of this game is the fact the user is playing against the computer. This feature operates in the background of the game, in the sense that each round the user plays against the computer, rather than the computers weapon choice being a requested input like the user, it is an automatically generated random weapon choice. This ensures the 'chance' style of this game is true in nature and not a "fixed" format. The interaction the user has with the computer is at the round result of each round in the game, it shows who won that round and the score tally. This was designed a class for future game upgrades and additions. 
 
-## Play Again Option - Method
+## Play Again Option 
 This feature is in place for if the user would like to reset and start a whole new game again without exiting the application and re-entering. The user will intereact with this function after the game winner annoucement has been produced. The user will have the option to return to a new game, or quit the application entirely.
 Error handling: An exception is in place for if the user makes an invalid entry to the available choices, and will prompt the user to choose again so the selection is correct.
-
-## Nice to have for future
-- Restart game option for during the game
-- Actual names for the weapon wins ..eg Paper ‘COVERS’ Rock. Not just ‘beats’
-- A feature for naming the rounds played
-- A feature that names the computer player
-- Hardcoding the weapons as images
-
 
 ## User Interface
 To further increase the usability of the game, specific Ruby Gems were chosen.
@@ -105,6 +97,14 @@ To enable the text to be different colours.
 - 'artii'
 For the alternate welcome banner.
 
+## Nice to have for future
+- Restart game option for during the game
+- Actual names for the weapon wins ..eg Paper ‘COVERS’ Rock. Not just ‘beats’
+- A feature for naming the rounds played
+- A feature that names the computer player
+- Hardcoding the weapons as images
+
+
 
 # Control Flow Diagram
 
@@ -118,6 +118,7 @@ Main Application Flow Chart
 Game Loop Flow Chart
 
 ![Game Round Flowchart](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/Game%20Round%20Flowchart.png  "Game Round Flowchart")
+
 
 
 # Implementation Plan
@@ -159,9 +160,15 @@ Final
 The tests can be found in the test files
 The spread sheet which holds the listed manual tests created can be found at this [link.](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/man_tests_T1A2.xlsx)
 Below is a shot of it.
+![tests](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/tests.png  "tests")
 
 ## Automatic
-There are automatic exceptions in place for handling errors that could arise. T
+There are automatic exceptions in place for handling errors that could arise as mentioned above in the features. 
+Exceptions for:
+- Player username input
+- Incorrect entry for weapon choice
+- In the case of a tie
+- Incorrect entry for play again option
 
 
 # Help
