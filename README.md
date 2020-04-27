@@ -140,7 +140,7 @@ Completed
 
 Screen shots of the implemenation process throughout can be seen below.
 
-![trello_shot_1](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/Main%20flowchart.png  "trello_shot_1")
+![trello_shot_1](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/trello_shot_1.png  "trello_shot_1")
 
 # Testing
 
