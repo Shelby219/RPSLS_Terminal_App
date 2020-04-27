@@ -163,8 +163,7 @@ Below is a shot of it.
 ![tests](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/tests.png  "tests")
 
 ## Automatic
-There are automatic exceptions in place for handling errors that could arise as mentioned above in the features. 
-Exceptions for:
+There are automatic exceptions in place for handling errors that could arise as mentioned above in the features. Exceptions for:
 - Player username input
 - Incorrect entry for weapon choice
 - In the case of a tie

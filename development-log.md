@@ -122,4 +122,4 @@ Incorporated a command line arguement for switching up the introduction heading.
 
 Final tests checked and passing.
 
-Outside eyes played the game (my husband), and he played the game right through with no errors!
+Outside eyes played the game (my husband), and he played the game right through.
