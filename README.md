@@ -138,9 +138,17 @@ Completed
 -Issues
 -Nice to Have
 
-Screen shots of the implemenation process throughout can be seen below.
+All screen shots of the implemenation process on Trello can be see at this [link.](https://trello.com/b/OeYT8sVj/caterminalapp). Additionally there are 3 shots below of the start, during and end of my application build.
 
+Beginning
 ![trello_shot_1](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/trello_shot_1.png  "trello_shot_1")
+
+During
+![trello_shot_4](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/trello_shot_4.png  "trello_shot_4")
+
+Final
+![trello_shot_7](https://github.com/Shelby219/CA_Terminal_App_RPSLS/blob/master/docs/trello_shot_7.png  "trello_shot_7")
+
 
 # Testing
 
